@@ -1,3 +1,8 @@
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="filename">
+    <input type="submit" value="Send">
+</form>
+
 <?php
 
 mkdir(
@@ -26,8 +31,5 @@ if (move_uploaded_file($_FILES['filename']['tmp_name'], 'upload/'.$_FILES['filen
 
     echo 'Файл скопирован на сервер';
 } 
-else {
-    echo 'Файл не скопирован на сервер';
-}
 
 ?>
